@@ -52,39 +52,37 @@ void loop() {
   if (rightDistance == 0 && leftDistance == 0 ) {
     folkracer.setSpeed(0.3);
     folkracer.setAngle(0);
-  } 
-  
-  if (leftDistance == 0 && rightDistance > 0 && rightDistance < 30 ) { // αριστερα 
-    folkracer.setAngle(50);
   }
-  if ( leftDistance > 30 && rightDistance > 0 && rightDistance < 30 ) { // αριστερα
-    folkracer.setAngle(50);
-  }
-  
-  if ( leftDistance > 0 && leftDistance < 30 &&  rightDistance > 30 ) { //δεξια 
-    folkracer.setAngle(50);
-  }
-  
-  if ( leftDistance == 0 && rightDistance == 0 ) { //ευθεια
-    folkracer.setAngle(50);
-  }
-  
-  if (leftDistance == 0 && rightDistance > 30 ) { //ευθεια
+
+  if (leftDistance == 0 && rightDistance > 0 && rightDistance < 30 ) { // D3
     folkracer.setAngle(50);
   }
 
-  if (leftDistance > 0 && leftDistance < 30 && rightDistance == 0 ) { //δεξια
+  if ( leftDistance > 30 && rightDistance > 0 && rightDistance < 30 ) { // D5
     folkracer.setAngle(50);
   }
-  
-  if (leftDistance > 0 && leftDistance < 30 && rightDistance > 0 && rightDistance < 30 ) { //ευθεια
+
+  if ( leftDistance > 0 && leftDistance < 30 &&  rightDistance > 30 ) { //  E4
     folkracer.setAngle(50);
   }
-  
-  if ( leftDistance > 30 &&  rightDistance == 0 ) { //ευθεια
+
+  if ( leftDistance == 0 && rightDistance == 0 ) { // C3
     folkracer.setAngle(50);
   }
-  
-  if ( leftDistance > 30 &&  rightDistance > 30 ) { // ευθεια 
+
+  if (leftDistance == 0 && rightDistance > 30 ) { //E3
+    folkracer.setAngle(50);
+  }
+
+  if (leftDistance > 0 && leftDistance < 30 && rightDistance == 0 ) { //C4
+    folkracer.setAngle(50);
+  }
+  if (leftDistance > 0 && leftDistance < 30 && rightDistance > 0 && rightDistance < 30 ) { //D4
+    folkracer.setAngle(50);
+  }
+  if ( leftDistance > 30 &&  rightDistance == 0 ) { //C5
+    folkracer.setAngle(50);
+  }
+  if ( leftDistance > 30 &&  rightDistance > 30 ) { // E5
     folkracer.setAngle(50);
   }
