@@ -2,7 +2,7 @@
 #include <SoftwareSerial.h>
 
 Odometer encoderLeft(190), encoderRight(190); //Βάλτε τους δικούς σας παλμούς ανά μέτρο
-Gyroscope gyro(13); //Βάλτε την κατάλληλη τιμή σύμφωνα με το γυροσκόπιό σας
+Gyroscope gyro(5); //Βάλτε την κατάλληλη τιμή σύμφωνα με το γυροσκόπιό σας
 Car folkracer;
 SR04 sonarLeft, sonarRight, sonarFront; //dilwse tis metavlites sonarLeft, sonarRight kai sonarFront pou antiproswpevoun tous iperixous
 SoftwareSerial bluetooth(6, 7); //συνδέστε το bluetooth ως εξής: Το RX του Bluetooth στο pin 6 και το ΤΧ του bluetooth στο pin 7 (VCC -> 5V, GND -> GND)
@@ -29,7 +29,7 @@ void setup() {
   folkracer.enableCruiseControl(); //ξεκινάει τον έλεγχο της ταχύτητας του αυτοκινήτου
   gyro.begin(); //ξεκινάει τις μετρήσεις στο γυροσκόπειο
   /* Εάν θέλετε να διαβάσετε απλά τις αποστάσεις, δίχως να κινείται το αυτοκινητάκι, βάλτε ταχύτητα 0 στην παρακάτω γραμμή */
-  folkracer.setSpeed(0); //θέτει την ταχύτητα στο αυτοκινητάκι στα 0.2 μέτρα ανά δευτερόλεπτο (εάν είναι πολύ αργό, αυξήστε λίγο την ταχύτητα)
+  folkracer.setSpeed(0.2); //θέτει την ταχύτητα στο αυτοκινητάκι στα 0.2 μέτρα ανά δευτερόλεπτο (εάν είναι πολύ αργό, αυξήστε λίγο την ταχύτητα)
   folkracer.setAngle(0); //Το αυτοκινητάκι πηγαίνει ευθεία
 }
 
@@ -57,7 +57,7 @@ void loop() {
 
   if ( leftDistance > 30 && rightDistance > 0 && rightDistance < 30 ) { // D5
     folkracer.setAngle(-50);
-    bluetooth.println ( "Στριβει ευθεια D4" );
+    bluetooth.println ( "Στριβει αριστερα D5" );
   }
 
   if ( leftDistance > 0 && leftDistance < 30 &&  rightDistance > 30 ) { //  E4
