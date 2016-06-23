@@ -51,43 +51,61 @@ void loop() {
   //το αυτοκινητάκι όταν κινείται στην πίστα!
 
   if (leftDistance == 0 && rightDistance > 0 && rightDistance < 30 ) { // D3
+    folkracer.stop
     folkracer.setAngle(-50);
+    folkracer.setSpeed(0.3);
     bluetooth.println ( "Στριβει αριστερα D3" );
   }
 
   if ( leftDistance > 30 && rightDistance > 0 && rightDistance < 30 ) { // D5
+    folkracer.stop
     folkracer.setAngle(-50);
+    folkracer.setSpeed(0.3);
     bluetooth.println ( "Στριβει αριστερα D5" );
   }
 
   if ( leftDistance > 0 && leftDistance < 30 &&  rightDistance > 30 ) { //  E4
+    folkracer.stop
     folkracer.setAngle(50);
+    folkracer.setSpeed(0.3);
     bluetooth.println ( "Στριβει δεξια E4" ) ;
   }
 
   if ( leftDistance == 0 && rightDistance == 0 ) { // C3
+    folkracer.stop
     folkracer.setAngle(0);
+    folkracer.setSpeed(0.3);
     bluetooth.println ( "Στριβει ευθεια C3" );
   }
 
   if (leftDistance == 0 && rightDistance > 30 ) { //E3
+    folkracer.stop
     folkracer.setAngle(0);
+    folkracer.setSpeed(0.3);
     bluetooth.println ( "Στριβει ευθεια E3" );
   }
 
   if (leftDistance > 0 && leftDistance < 30 && rightDistance == 0 ) { //C4
+    folkracer.stop
     folkracer.setAngle(50);
+    folkracer.setSpeed(0.3);
     bluetooth.println ( "Στριβει δεξια C4" );
   }
   if (leftDistance > 0 && leftDistance < 30 && rightDistance > 0 && rightDistance < 30 ) { //D4
+    folkracer.stop
     folkracer.setAngle(0);
+    folkracer.setSpeed(0.3);
     bluetooth.println ( "Στριβει ευθεια D4" );
   }
   if ( leftDistance > 30 &&  rightDistance == 0 ) { //C5
+    folkracer.stop
     folkracer.setAngle(0);
+    folkracer.setSpeed(0.3);
     bluetooth.println ( "Στριβει ευθεια C5" );
   }
   if ( leftDistance > 30 &&  rightDistance > 30 ) { // E5
+    folkracer.stop
     folkracer.setAngle(0);
+    folkracer.setSpeed(0.3);
     bluetooth.println ( "Στριβει ευθεια Ε5" );
   }
